@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,800;1,400&family=Nunito+Sans:wght@300;400;600;700&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Alfa Slab One', monospace;
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ESTILOS GERAIS */
+html{
+	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+ul li{
+	list-style: none;
+}
+
+body{
+	font-family: "Courier", sans-serif;
+	overflow-x: hidden;
+	background: #0c0d12;
+}
+
+.main{
+	width: 100%;
+	height: 720px;
+	background: url("../imgs/mont-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 997;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.gradient{
+	width: 650px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.container{
+	width: 100%;
+	height: 1250px;
+}
+
+/* Informações sobre as montanhas */
+.info{
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid #8f9097;
+	padding: 10px 0;
+}
+
+.info:last-child{
+	border-bottom: 0;
+}
+
+.info + .info{
+	margin-top: 10px;
+}
+
+.info span{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 25px;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	color: #dae3e7;
+}
+
+.info a {
+	animation: changeColorText 2s infinite;
+	font-weight: bold;
+}
+
+/* Animação para trocar o texto de cor */
+@keyframes changeColorText {
+	0% {
+		color: #28b5a2;
+	}
+
+	50% {
+		color: #4e89c8;
+	}
+
+	100% {
+		color: #28b5a2;	
+	}
+}
+
+.info svg{
+	font-size: 25px;
+	color: #4e89c8;
+	margin-right: 15px;
+}
+
+.info p, .info a{
+	margin-top: 5px;
+}
+
+/**************************
+		01. NAVEGAÇÃO
+***************************/
+.navbar{
+	width: 100%;
+	height: 65px;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.45);
+	position: fixed;
+	top: 0;
+}
+
+.c-navbar{
+	width: 1250px;
+	height: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.c-navbar a{
+	width: auto;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-logo{
+	width: 180px;
+	height: 50px;
+	align-items: center;
+}
+
+.lista{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lista li + li{
+	margin-left: 15px;
+}
+
+.lista a{
+	color: #dae3e7;
+	border-bottom: 2px solid transparent;
+	transition: .6s all ease;
+	padding: 5px 10px;
+}
+
+.lista a:hover{
+	border-bottom: 2px solid #4e89c8;
+}
+
+/**************************
+		02. BANNER
+***************************/
+.banner{
+	width: 100%;
+	height: 655px;
+	margin-top: 65px;
+	position: absolute;
+}
+
+.escuro{
+	min-width: 520px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.45);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;
+}
+
+.c-banner{
+	width: 1250px;
+	height: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.texto{
+	width: 835px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	z-index: 998;
+}
+
+.texto p{
+	font-size: 60px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #dae3e7;
+}
+
+.t-span{
+	font-family: 'Montserrat', sans-serif;
+	animation: changeColorText 10s infinite;
+	font-weight: 900; 
+}
+
+/********************************
+	Sobre todas as montanhas.
+*********************************/
+.sobre-montanha{
+	width: 49%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.info-numb{
+	display: flex;
+	align-items: center;
+	font-size: 50px;
+	font-weight: 500;
+	/* color: #24db44; */
+	z-index: 1;
+	color: #4e89c8;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.sobre-montanha h1{
+	font-size: 50px;
+	font-weight: 400;
+	margin-left: 5px;
+	color: #dae3e7;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.sobre-texto{
+	font-family: 'Nunito Sans', sans-serif;
+	color: #dae3e7;
+}
+
+.imagem-montanha{
+	width: 49%;
+	height: 100%;
+	animation: flutuar 5s infinite;
+}
+
+@keyframes flutuar {
+	0% {
+		transform: translateY(5px);
+	}
+
+	50% {
+		transform: translateY(-5px);
+	}	
+
+	100% {
+		transform: translateY(5px);
+	}
+}
+
+.imagem-montanha img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/**************************
+	03. Pico da Caledônia
+***************************/
+.caledonia{
+	width: 100%;
+	height: 720px;
+	padding: 30px 0;
+}
+
+.c-caledonia{
+	width: 1250px;
+	height: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/**************************
+	04. Monte Roraima
+***************************/
+.roraima{
+	width: 100%;
+	height: 720px;
+	padding: 30px 0;
+}
+
+.c-roraima{
+	width: 1250px;
+	height: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/**************************
+	05. Pico Paraná
+***************************/
+.parana{
+	width: 100%;
+	height: 720px;
+	padding: 30px 0;
+}
+
+.c-parana{
+	width: 1250px;
+	height: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/**************************
+	06. Dedo de Deus
+***************************/
+.dedodedeus{
+	width: 100%;
+	height: 720px;
+	padding: 30px 0;
+}
+
+.c-dedodedeus{
+	width: 1250px;
+	height: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/**************************
+	07. Agulhas Negras
+***************************/
+.agulhas{
+	width: 100%;
+	height: 720px;
+	padding: 30px 0;
+}
+
+.c-agulhas{
+	width: 1250px;
+	height: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/**************************
+	08. Rodapé
+***************************/
+.rodape{
+	width: 100%;
+	height: auto;
+	padding: 30px 50px 5px 50px;
+	background: whitesmoke;
+	position: relative;
+}
+
+.c-rodape{
+	width: 1250px;
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* parte esquerda */
+.esq-rodape-infos{
+	width: 50%;
+	height: 100%;
+}
+
+.logo-brasil{
+	width: 300px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.logo-brasil img{
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+
+.redes{
+	width: 100%;
+	height: auto;
+	margin-top: 30px;
+	padding: 30px 0;
+	border-top: 2px solid #8f9097;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.redes h1{
+	font-size: 24px;
+	font-weight: 500;
+	font-family: "Montserrat", sans-serif;
+	color: #111;
+}
+
+.redes a{
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.redes img,
+.redes a svg{
+	width: 40px;
+	height: 40px;
+}
+
+/* parte direita */
+.dir-conteudo{
+	width: 50%;
+	height: 100%;
+	border-left: 2px solid #8f9097;
+}
+
+.conteudo-items{
+	font-size: 30px;
+	padding: 15px;
+}
+
+.conteudo-items a:hover{
+	color: #4e89c8;
+}
+
+.copyright{
+	width: 100%;
+	height: auto;
+	border-top: 2px solid #8f9097;
+	padding: 15px 0;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	color: #4e89c8;
+}
